@@ -1,4 +1,3 @@
-// nawigacja
 const ham = document.querySelector(".menu-toggle")
 const nav = document.querySelector('nav');
 
@@ -7,7 +6,6 @@ ham.addEventListener('click', () => {
 })
 
 
-// slides
 const slideList = [{
         photo: "images/img1.jpg",
         txt: `I’m looking for freedom, looking for freedom
@@ -51,16 +49,11 @@ const h1 = document.querySelector('h1#slider');
 const arrowLeft = document.getElementById('arrow-left');
 const arrowRight = document.getElementById('arrow-right');
 
-// czas zmiany zdjec 
 const time = 5000;
-//okreslenie ktory slajd aktywny 
 let active = 0;
-
-// slides nonstop, jako funkja by zatrzymac przy klikaniu
 
 const changeSlide = () => {
     active++;
-    // aby slides nonstop
     if (active === slideList.length) {
         active = 0;
     }
@@ -92,6 +85,5 @@ const slideRight = () => {
 
 let indexInterval = setInterval(changeSlide, time);
 
-// zmiany zdjecia i tekstu po kliknieciu strzalki
 arrowLeft.addEventListener('click', slideLeft);
 arrowRight.addEventListener('click', slideRight);
